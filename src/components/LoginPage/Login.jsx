@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import {  NavLink } from "react-router-dom";
+import {  NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider/Auth";
 
 
@@ -7,6 +7,9 @@ const Login = () => {
   const[logError,setLogError]=useState('');
   const[success, setSuccess]=useState('');
   const [see,setSee]=useState(false);
+  //page reload function
+  const location=useLocation()
+  const navigate  =useNavigate()
 
   const{signIn}=useContext(AuthContext)
     const handleLogin=e=>{
@@ -21,6 +24,8 @@ const Login = () => {
         //sign in the user with the email and password
         signIn(email,password)
         .then(result=>{console.log(result)
+          // navigate to page after successful login
+          navigate(location.state)
           setSuccess('Successfully login ');
         })
         .catch(err=>{setLogError(err.message)});

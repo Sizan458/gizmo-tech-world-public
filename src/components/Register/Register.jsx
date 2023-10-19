@@ -51,7 +51,7 @@ const Register = () => {
   }
   return (
     <div className=" mt-2 mx-4 md:mx-10 lg:mx-20">
-        <div className="hero  " style={{backgroundImage: 'url(https://i.ibb.co/mthkD0w/R-9.jpg)'}}>
+        <div className="hero  lg:h-[80vh] " style={{backgroundImage: 'url(https://i.ibb.co/mthkD0w/R-9.jpg)'}}>
   <div className="hero-overlay bg-opacity-60"></div>
    <form onSubmit={handleRegister} >
    <div className="form-control w-full ">
