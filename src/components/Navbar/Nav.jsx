@@ -10,8 +10,8 @@ const Nav = () => {
      
     </>
     return (
-        <div className="mx-3 mt-2">
-         <div className="navbar  bg-green-300 rounded-lg">
+        <div className="mx-1 mt-2">
+         <div className="navbar   bg-slate-400 rounded-lg">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-error lg:hidden">
@@ -21,7 +21,7 @@ const Nav = () => {
         {link}
       </ul>
     </div>
-    <img src="https://i.ibb.co/JtLx4tW/logo-design-technology-global-computer-network-vector-34214719-removebg-preview.png" className="h-[80px]"></img>
+    <img src="https://i.ibb.co/JtLx4tW/logo-design-technology-global-computer-network-vector-34214719-removebg-preview.png" className="h-[70px]"></img>
     <p>Gizmo Tech World</p>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -30,7 +30,7 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn  btn-success">Login</a>
+    <button className="btn glass">Login</button>
   </div>
 </div>
         </div>
