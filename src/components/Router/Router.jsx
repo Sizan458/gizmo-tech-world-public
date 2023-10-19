@@ -14,7 +14,8 @@ const Router = createBrowserRouter([
         children:[
           {
             path: "/",
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader:()=>fetch('https://gizmo-tech-world-server-h2bsbf08q-mdsizan-mahmuds-projects.vercel.app/brands')
           }
         ]
     }
