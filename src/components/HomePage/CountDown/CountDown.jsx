@@ -2,8 +2,9 @@
 
 const CountDown = () => {
     return (
-        <div className="mt-1 mx-4">
-            <div className="hero  bg-base-200">
+        <div className="mt-1 mx-7">
+         
+            <div className="hero  ">
   <div className="hero-content flex-col lg:flex-row-reverse">
   <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div className="flex flex-col">
