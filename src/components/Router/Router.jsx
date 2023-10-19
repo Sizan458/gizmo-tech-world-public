@@ -3,6 +3,8 @@ import Nav from "../Navbar/Nav";
 import Error from "../ErrorPage/Error";
 import Home from "../HomePage/Home/Home";
 import AddProducts from "../AddProductPage/AddProduct/AddProducts";
+import Register from "../Register/Register";
+import Login from "../LoginPage/Login";
 
 const Router = createBrowserRouter([
     {
@@ -21,6 +23,15 @@ const Router = createBrowserRouter([
           {
             path:"/AddProduct",
             element:<AddProducts></AddProducts>
+          },
+          {
+            path:"/register",
+            element:<Register></Register>
+          },
+          {
+            path:"/login",
+            element:<Login></Login>
+            
           }
         ]
     }
