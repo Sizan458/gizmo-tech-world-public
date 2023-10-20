@@ -2,9 +2,7 @@ import Footer from "../../Footer/Footer";
 import swal from "sweetalert";
 import { BsFillCartCheckFill } from "react-icons/bs";
 
-
-const GoogleCard = ({data}) => {
-    
+const OnepluseCard = ({data}) => {
     const{img,_id, brand,type,name,price,reating,
     }=data ||{};
  const handleCart = ()=>{
@@ -84,4 +82,4 @@ const GoogleCard = ({data}) => {
     );
 };
 
-export default GoogleCard;
+export default OnepluseCard;

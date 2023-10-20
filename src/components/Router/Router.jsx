@@ -15,6 +15,11 @@ import Walton from "../BrandRoute/Walton/Walton";
 import Google from "../BrandRoute/Google/Google";
 import Realme from "../BrandRoute/Realme/Realme";
 import Googles from "../MorePage/Googles/Googles";
+import Waltons from "../MorePage/Waltons/Waltons";
+import Xiaomis from "../MorePage/Xiaomi/Xiaomis";
+import Onepluss from "../MorePage/Oneplus/Oneplus";
+import Samsungs from "../MorePage/Samsungs/Samsungs";
+import Realmes from "../MorePage/Realmes/Realmes";
 
 const Router = createBrowserRouter([
     {
@@ -85,8 +90,46 @@ const Router = createBrowserRouter([
         },
         {
           path:"/google/:id",
-          element:<Googles></Googles>,
+          element:<PrivateRoute>
+            <Googles></Googles>
+          </PrivateRoute>,
           loader:()=>fetch('http://localhost:5000/google-products')
+        },
+        {
+          path:"/walton/:id",
+          element:<PrivateRoute>
+            <Waltons></Waltons>
+          </PrivateRoute>,
+          loader:()=>fetch('http://localhost:5000/walton-products')
+        },
+        {
+          path:"/xiaomi/:id",
+          element:<PrivateRoute>
+            <Xiaomis></Xiaomis>
+          </PrivateRoute>,
+          loader:()=>fetch('http://localhost:5000/xiaomi-products')
+        },
+        {
+          path:"/oneplus/:id",
+          element:<PrivateRoute>
+            <Onepluss></Onepluss>
+          </PrivateRoute>,
+          loader:()=>fetch('http://localhost:5000/onePlus-products')
+        },
+        {
+          path:"/samsung/:id",
+          element:<PrivateRoute>
+            <Samsungs></Samsungs>
+          </PrivateRoute>,
+          loader:()=>fetch('http://localhost:5000/samsung-products')
+          
+        },
+        {
+          path:"/realme/:id",
+          element:<PrivateRoute>
+            <Realmes></Realmes>
+          </PrivateRoute>,
+          loader:()=>fetch('http://localhost:5000/realme-products')
         }
           
         ]

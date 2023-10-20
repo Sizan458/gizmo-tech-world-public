@@ -1,30 +1,11 @@
 import Footer from "../../Footer/Footer";
-import swal from "sweetalert";
+
 import { BsFillCartCheckFill } from "react-icons/bs";
 
 
-const GoogleCard = ({data}) => {
-    
+const RealmeCards = ({data}) => {
     const{img,_id, brand,type,name,price,reating,
     }=data ||{};
- const handleCart = ()=>{
-   // local storage set function
-    const AddProduct =[]
-        
-    const add=  JSON.parse(localStorage.getItem('productData'))
-    if(!add){
-      AddProduct.push(data)
-      localStorage.setItem('productData', JSON.stringify(AddProduct))
-
-    }else{
-    
-
-      AddProduct.push(...add, data)
-      localStorage.setItem('productData', JSON.stringify(AddProduct))
-      swal("Thanks", "Thank you very much", "success")
-    }
- }
-
     return (
         <div className="mt-3 lg:w-[98%] mx-auto">
            <div>
@@ -39,8 +20,21 @@ const GoogleCard = ({data}) => {
         <p className=" text-xl md:text-2xl">Rating:{reating}</p>
         <p className=" text-xl md:text-2xl">Price:{price}</p>
         <p className=" text-xl md:text-2xl">Health:100%</p>
+        <div>
+            {/* You can open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn glass mt-3 text-2xl bg-orange-300" onClick={()=>document.getElementById('my_modal_3').showModal()}><BsFillCartCheckFill></BsFillCartCheckFill></button>
+<dialog id="my_modal_3" className="modal">
+  <div className="modal-box">
+    <form method="dialog">
+      {/* if there is a button in form, it will close the modal */}
+      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    
+    <p className="py-4 text-red-400 text-center">Product Is not available now</p>
+  </div>
+</dialog>
+        </div>
         
-        <button className="btn glass mt-3 text-2xl bg-orange-300" onClick={handleCart}><BsFillCartCheckFill></BsFillCartCheckFill></button>
     </div>
   </div>
 </div>
@@ -84,4 +78,4 @@ const GoogleCard = ({data}) => {
     );
 };
 
-export default GoogleCard;
+export default RealmeCards;

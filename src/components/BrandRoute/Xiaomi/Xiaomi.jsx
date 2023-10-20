@@ -4,7 +4,7 @@ import Card from "../../BrandPages/Xiaomi/Card/Card";
 
 const Xiaomi = () => {
     const products= useLoaderData()
-    console.log(products)
+   
     return (
         <div>
            <Slider></Slider>

@@ -1,9 +1,7 @@
 import Footer from "../../Footer/Footer";
 import swal from "sweetalert";
 import { BsFillCartCheckFill } from "react-icons/bs";
-
-
-const GoogleCard = ({data}) => {
+const WaltonCard = ({data}) => {
     
     const{img,_id, brand,type,name,price,reating,
     }=data ||{};
@@ -39,7 +37,6 @@ const GoogleCard = ({data}) => {
         <p className=" text-xl md:text-2xl">Rating:{reating}</p>
         <p className=" text-xl md:text-2xl">Price:{price}</p>
         <p className=" text-xl md:text-2xl">Health:100%</p>
-        
         <button className="btn glass mt-3 text-2xl bg-orange-300" onClick={handleCart}><BsFillCartCheckFill></BsFillCartCheckFill></button>
     </div>
   </div>
@@ -81,7 +78,7 @@ const GoogleCard = ({data}) => {
             <Footer></Footer>
            </div>
         </div>
-    );
+    )
 };
 
-export default GoogleCard;
+export default WaltonCard;

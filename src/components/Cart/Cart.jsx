@@ -18,7 +18,7 @@ const Cart = () => {
         <div>
            <div>
             {
-                noData ? <p>{noData}</p>:
+                noData ? <p className="text-2xl text-center mt-[10%] text-red-400">{noData}</p>:
                 <div className="w-[96%] mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 ">
                  {
                     order.map(product=>(<div className="hero mt-2 bg-base-200" key={[product._id]}>
