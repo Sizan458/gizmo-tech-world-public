@@ -14,6 +14,7 @@ import Oneplus from "../BrandRoute/Oneplus/Oneplus";
 import Walton from "../BrandRoute/Walton/Walton";
 import Google from "../BrandRoute/Google/Google";
 import Realme from "../BrandRoute/Realme/Realme";
+import Googles from "../MorePage/Googles/Googles";
 
 const Router = createBrowserRouter([
     {
@@ -81,6 +82,11 @@ const Router = createBrowserRouter([
           path:"/realme",
           element:<Realme></Realme>,
           loader:()=>fetch('http://localhost:5000/realme-products')
+        },
+        {
+          path:"/google/:id",
+          element:<Googles></Googles>,
+          loader:()=>fetch('http://localhost:5000/google-products')
         }
           
         ]
