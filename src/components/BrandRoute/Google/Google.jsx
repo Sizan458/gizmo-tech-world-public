@@ -1,9 +1,10 @@
+import Slider from "../../BrandPages/Google/Slider/Slider";
 
 
 const Google = () => {
     return (
         <div>
-            <h3>lll</h3>
+            <Slider></Slider>
         </div>
     );
 };

@@ -1,8 +1,9 @@
+import Slider from "../../BrandPages/Xiaomi/Slider/Slider";
 
 const Xiaomi = () => {
     return (
         <div>
-            <h1>jjjj</h1>
+           <Slider></Slider>
         </div>
     );
 };

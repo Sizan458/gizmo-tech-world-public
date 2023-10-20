@@ -1,9 +1,10 @@
+import Slider from "../../BrandPages/Walton/Slider/Slider";
 
 
 const Walton = () => {
     return (
         <div>
-            <h2>hhhhhh</h2>
+           <Slider></Slider>
         </div>
     );
 };

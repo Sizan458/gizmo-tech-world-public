@@ -1,9 +1,10 @@
+import Slider from "../../BrandPages/Oneplus/Silder/Slider";
 
 
 const Oneplus = () => {
     return (
         <div>
-            <h2>hhhh</h2>
+           <Slider></Slider>
         </div>
     );
 };

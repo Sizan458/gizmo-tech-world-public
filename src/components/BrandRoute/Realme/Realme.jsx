@@ -1,9 +1,10 @@
+import Slider from "../../BrandPages/Realme/Silder/Slider";
 
 
 const Realme = () => {
     return (
         <div>
-            <h2>jjjjjjj</h2>
+           <Slider></Slider>
         </div>
     );
 };
