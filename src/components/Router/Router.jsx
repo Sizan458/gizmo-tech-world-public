@@ -20,11 +20,14 @@ const Router = createBrowserRouter([
           {
             path: "/",
             element:<Home></Home>,
-            loader:()=>fetch('https://gizmo-tech-world-server-h2bsbf08q-mdsizan-mahmuds-projects.vercel.app/brands')
+            loader:()=>fetch('http://localhost:5000/brands')
+            
           },
           {
             path:"/AddProduct",
-            element:<AddProducts></AddProducts>
+            element:<PrivateRoute>
+              <AddProducts></AddProducts>
+            </PrivateRoute>
           },
           {
             path:"/register",
@@ -40,7 +43,8 @@ const Router = createBrowserRouter([
             element:<PrivateRoute>
               <Cart></Cart>
             </PrivateRoute>
-          }
+          },
+          
         ]
     }
 ]);
