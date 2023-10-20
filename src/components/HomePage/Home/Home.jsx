@@ -7,7 +7,6 @@ import Cards from "../CardsSection/Cards";
 
 
 const Home = () => {
-    const brands =useLoaderData()
     
     return (
         <div>
@@ -15,11 +14,7 @@ const Home = () => {
             <div>
                 <CountDown></CountDown>
             </div>
-           <div className="w-[80%] mx-auto  grid grid-cols-1 mt-3 mb-3 gap-2 md:grid-cols-2 lg:grid-cols-3">
-           {
-            brands.map(brands=><Cards key={brands._id}  brands={brands}></Cards>)
-           }
-           </div>
+           <Cards></Cards>
             <div>
                 <TopProducts></TopProducts>
             </div>

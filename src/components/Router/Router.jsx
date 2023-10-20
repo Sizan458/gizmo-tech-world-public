@@ -8,6 +8,13 @@ import Login from "../LoginPage/Login";
 import Cart from "../Cart/Cart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
+import Samsung from "../BrandRoute/Samsung/Samsung";
+import Xiaomi from "../BrandRoute/Xiaomi/Xiaomi";
+import Oneplus from "../BrandRoute/Oneplus/Oneplus";
+import Walton from "../BrandRoute/Walton/Walton";
+import Google from "../BrandRoute/Google/Google";
+import Realme from "../BrandRoute/Realme/Realme";
+
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -44,6 +51,37 @@ const Router = createBrowserRouter([
               <Cart></Cart>
             </PrivateRoute>
           },
+          {
+            path:"/samsung",
+            element:<Samsung></Samsung>,
+            loader:()=>fetch('http://localhost:5000/samsung-products')
+            
+          },
+          {
+            path:"/xiaomi",
+            element:<Xiaomi></Xiaomi>,
+            loader:()=>fetch('http://localhost:5000/xiaomi-products')
+          },
+        {
+          path:"/oneplus",
+          element:<Oneplus></Oneplus>,
+          loader:()=>fetch('http://localhost:5000/onePlus-products')
+        },
+        {
+          path:"/walton",
+          element:<Walton></Walton>,
+          loader:()=>fetch('http://localhost:5000/walton-products')
+        },
+        {
+          path:'/google',
+          element:<Google></Google>,
+          loader:()=>fetch('http://localhost:5000/google-products')
+        },
+        {
+          path:"/realme",
+          element:<Realme></Realme>,
+          loader:()=>fetch('http://localhost:5000/realme-products')
+        }
           
         ]
     }
