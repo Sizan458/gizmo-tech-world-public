@@ -5,6 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 const Cart = () => {
     const [order,setOrder] =useState([])
     const [noData ,setNoData] = useState('')
+   
     useEffect(() => {
         const buy=JSON.parse(localStorage.getItem('productData'))
         setOrder(buy)
@@ -13,7 +14,15 @@ const Cart = () => {
         }else{
             setNoData('You Have Not Selected any Product')
         }
+        
     },[])
+    const handleDelete =  ()=>{
+       localStorage.clear()
+       
+
+        
+    }
+
     return (
         <div>
            <div>
@@ -21,7 +30,7 @@ const Cart = () => {
                 noData ? <p className="text-2xl text-center mt-[10%] text-red-400">{noData}</p>:
                 <div className="w-[96%] mx-auto grid grid-cols-1 gap-2 md:grid-cols-2 ">
                  {
-                    order.map(product=>(<div className="hero mt-2 bg-base-200" key={[product._id]}>
+                    order.map(product=>(<div className="hero mt-2 bg-base-200" key={product._id}>
                     <div className="hero-content flex-col lg:flex-row">
                       <img src={product.img} className=" rounded-lg shadow-xl md:h-[220px]" />
                       <div>
@@ -30,7 +39,7 @@ const Cart = () => {
                             <p className="text-2xl">price:{product.price}TK</p>
                         </div>
                        <div className="flex justify-end">
-                       <btn className="text-2xl btn-error"><AiFillDelete></AiFillDelete></btn>
+                       <btn className="text-2xl btn" onClick={handleDelete}><AiFillDelete></AiFillDelete></btn>
                        </div>
                       </div>
                     </div>

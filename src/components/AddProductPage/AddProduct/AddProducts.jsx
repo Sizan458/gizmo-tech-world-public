@@ -2,6 +2,7 @@ import Footer from "../../Footer/Footer";
 
 
 const AddProducts = () => {
+  
     
 
     return (
@@ -22,7 +23,7 @@ const AddProducts = () => {
     <span className="label-text text-xl text-black">Type </span>
     
   </label>
-  <select className="select select-bordered w-full  md:w-[500px] lg:w-[700px]">
+  <select  name="type"  id="type" className="select select-bordered w-full  md:w-[500px] lg:w-[700px]">
   <option disabled selected   >Product Type</option>
   <option>Mobile</option>
   <option>Tablet</option>

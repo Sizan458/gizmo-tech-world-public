@@ -20,6 +20,8 @@ import Xiaomis from "../MorePage/Xiaomi/Xiaomis";
 import Onepluss from "../MorePage/Oneplus/Oneplus";
 import Samsungs from "../MorePage/Samsungs/Samsungs";
 import Realmes from "../MorePage/Realmes/Realmes";
+import GoogleForm from "../Forms/GoogleForm/GoogleForm";
+
 
 const Router = createBrowserRouter([
     {
@@ -33,7 +35,7 @@ const Router = createBrowserRouter([
           {
             path: "/",
             element:<Home></Home>,
-            loader:()=>fetch('http://localhost:5000/brands')
+            loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/brands')
             
           },
           {
@@ -60,68 +62,68 @@ const Router = createBrowserRouter([
           {
             path:"/samsung",
             element:<Samsung></Samsung>,
-            loader:()=>fetch('http://localhost:5000/samsung-products')
+            loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/samsung-products')
             
           },
           {
             path:"/xiaomi",
             element:<Xiaomi></Xiaomi>,
-            loader:()=>fetch('http://localhost:5000/xiaomi-products')
+            loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/xiaomi-products')
           },
         {
           path:"/oneplus",
           element:<Oneplus></Oneplus>,
-          loader:()=>fetch('http://localhost:5000/onePlus-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/onePlus-products')
         },
         {
           path:"/walton",
           element:<Walton></Walton>,
-          loader:()=>fetch('http://localhost:5000/walton-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/walton-products')
         },
         {
           path:'/google',
           element:<Google></Google>,
-          loader:()=>fetch('http://localhost:5000/google-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/google-products')
         },
         {
           path:"/realme",
           element:<Realme></Realme>,
-          loader:()=>fetch('http://localhost:5000/realme-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/realme-products')
         },
         {
           path:"/google/:id",
           element:<PrivateRoute>
             <Googles></Googles>
           </PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/google-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/google-products')
         },
         {
           path:"/walton/:id",
           element:<PrivateRoute>
             <Waltons></Waltons>
           </PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/walton-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/walton-products')
         },
         {
           path:"/xiaomi/:id",
           element:<PrivateRoute>
             <Xiaomis></Xiaomis>
           </PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/xiaomi-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/xiaomi-products')
         },
         {
           path:"/oneplus/:id",
           element:<PrivateRoute>
             <Onepluss></Onepluss>
           </PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/onePlus-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/onePlus-products')
         },
         {
           path:"/samsung/:id",
           element:<PrivateRoute>
             <Samsungs></Samsungs>
           </PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/samsung-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/samsung-products')
           
         },
         {
@@ -129,7 +131,14 @@ const Router = createBrowserRouter([
           element:<PrivateRoute>
             <Realmes></Realmes>
           </PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/realme-products')
+          loader:()=>fetch('https://gizmo-tech-world-server-93de56zfr-mdsizan-mahmuds-projects.vercel.app/realme-products')
+        },
+        {
+          path:"/update/:id",
+          element:<PrivateRoute>
+            <GoogleForm></GoogleForm>
+          </PrivateRoute>
+          
         }
           
         ]

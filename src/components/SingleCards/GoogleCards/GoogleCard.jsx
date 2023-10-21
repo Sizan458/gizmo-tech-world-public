@@ -37,7 +37,7 @@ const GoogleCard = ({data}) => {
         <p className=" text-xl md:text-2xl">Name:{name}</p>
         <p  className=" text-xl md:text-2xl">Brand:{brand}</p>
         <p className=" text-xl md:text-2xl">Rating:{reating}</p>
-        <p className=" text-xl md:text-2xl">Price:{price}</p>
+        <p className=" text-xl md:text-2xl">Price:{price}TK</p>
         <p className=" text-xl md:text-2xl">Health:100%</p>
         
         <button className="btn glass mt-3 text-2xl bg-orange-300" onClick={handleCart}><BsFillCartCheckFill></BsFillCartCheckFill></button>
