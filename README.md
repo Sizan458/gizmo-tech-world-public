@@ -1,8 +1,25 @@
-# React + Vite
+## Preview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![App Screenshot](https://i.ibb.co/Dp12PFK/Web-capture-21-10-2023-8847-gizmo-tech-world-web-app.jpg)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Gizmo Tech World
+A simple E-commerce site .Build with react js & my own ApI.This My first web site which is make uing my own api using mongodb & Node Express.I try best .
+
+
+
+## 🔗 Links
+website Link:https://gizmo-tech-world.web.app
+
+
+## Features
+
+- Data come from my own api
+- WebSite is responsive
+- It is a single page website
+- Authentication is provide by Firebase
+- Database managenent using mongodb
+- Api depoly in Vercel
+- Private route enable
+
+
